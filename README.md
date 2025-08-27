@@ -104,8 +104,6 @@ Ref 15: Dashboards - Designed Kibana dashboards to visualize failed/successful S
 <img width="1914" height="932" alt="Install and Mythic and used it to download a file" src="https://github.com/user-attachments/assets/8fceb86d-4901-4b2f-8ddb-40a8de4f7179" />
 Ref 16: Mythic C2 - Installed **Mythic C2**, which turned out to be one of the bigger challenges in the lab. At first, the server would not display the Mythic dashboard at all, just a blank error page. I spent several days troubleshooting, checking ports, certificates, firewall rules, and even redeploying a new virtual machine on **Vultr** to confirm it wasn’t the Mythic install itself. That worked, which told me the issue was local to my own setup.  
 
-***
-
 After more digging, I discovered the root cause: my VPN had a web filter running in the background, even when the VPN was “disabled.” Once I turned off that filter, Mythic worked perfectly. From there I installed the **Apollo agent** on the Windows machine and used it to simulate attacker activity by downloading a honeytoken file. 
 
 ***
